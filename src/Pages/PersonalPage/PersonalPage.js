@@ -6,10 +6,11 @@ import { useParams } from "react-router-dom";
 function PersonDetails() {
   const [person, setPerson] = useState({});
   const { id } = useParams();
+  const bearerToken = localStorage.getItem("token");
 
   useEffect(() => {
     const fetchPersonData = async () => {
-      const response = await fetch(`http://sefdb02.qut.edu.au:3000/people/${id}`);
+      const response = await fetch(`http://sefdb02.qut.edu.au:3000/people/${id}`, {method: "GET", headers: {"Content-Type": "application/json", Authorization : "Bearer " + bearerToken}});
       const data = await response.json();
       setPerson(data);
     };
