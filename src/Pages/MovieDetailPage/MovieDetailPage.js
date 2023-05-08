@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link} from "react-router-dom";
+import './MovieDetailPage.css'
+import Button from 'react-bootstrap/Button';
 
 function MovieDetails() {
   const [movie, setMovie] = useState({});
@@ -15,16 +17,19 @@ function MovieDetails() {
   }, [imdbID]);
 
   return (
-    <div>
-      <h2>{movie.title}</h2>
-      <p>Year: {movie.year}</p>
-      <p>Runtime: {movie.runtime} minutes</p>
-      {movie.genres && (
-      <p>Genres: {movie.genres.join(", ")}</p>
+    <div className="MovieDetail-Container">
+      <h1 className="title-movie">{movie.title}</h1>
+      <div className="movie-info">
+      <p >Year: {movie.year}</p>
+      <p >Runtime: {movie.runtime} minutes</p>
+      {movie.genres && ( 
+      <p className="genre">Genres: {movie.genres.join("  ")}</p>
       )}
       <p>Country: {movie.country}</p>
+      <p>Boxoffice: {movie.boxoffice}</p>
+      </div>
       {movie.principals && (
-        <table>
+        <table className='table-MD'>
           <thead>
             <tr>
               <th>Role</th>
@@ -43,19 +48,14 @@ function MovieDetails() {
           </tbody>
         </table>
       )}
-
+    
       {movie.ratings && (
-        <table>
-            <thead>
-                <tr>
-                    <th>Source</th>
-                    <th>Value</th>
-                </tr>
-            </thead>
+        <table className="table-rating">
+           
             <tbody>
                 {movie.ratings.map((ratings) => (
                   <tr>
-                   <td>{ratings.source}</td>
+                   <td>{ratings.source}: </td>
                    <td>{ratings.value}</td>
                   </tr>
                 ))}
@@ -64,15 +64,18 @@ function MovieDetails() {
         )
       }
 
-      <p>Boxoffice: {movie.boxoffice}</p>
+      
 
       <p>
         {movie.poster && (
-            <img src={movie.poster} alt="Movie's poster" />
+            <img className='image' src={movie.poster} alt="Movie's poster" />
         )}
       </p>
-
-      <p>Plot: {movie.plot}</p>
+      
+      <div className="plot">
+      <p>{movie.plot}</p>
+      </div>
+      
       
 
     </div>

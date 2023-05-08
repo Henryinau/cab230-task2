@@ -156,7 +156,7 @@ export default function MovieSearch() {
 
     return (
     <div ref={containerRef} className="SearchContainer">
-    <h2>Movie List</h2>
+    <h1 className='search-title'>Movie List</h1>
     <div>
     <label>
     Search movies:
@@ -178,7 +178,7 @@ export default function MovieSearch() {
     </label>
     </div>
 
-    <table>
+    <table className='table-search'>
       <thead>
         <tr>
             <th>Title</th>

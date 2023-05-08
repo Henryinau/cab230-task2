@@ -29,7 +29,7 @@ function App() {
     <div>
       
       <BrowserRouter>
-      
+      <MyNavbar/>
       <Routes>
         <Route exact path="/" element={<LandingPage/>}/>
         <Route path="/login" element={<LoginPage />}/>
