@@ -26,7 +26,7 @@ function App() {
       <MyNavbar2/>
       <Routes>
         <Route exact path="/" element={<LandingPage/>}/>
-        <Route path="/login" element={<LoginPage onLogin={handleLogin}/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
         <Route path='/movie' element={<MainPage/>}/>
         <Route path="/movies/details/:imdbID" element={<MovieDetails/>}/>
         <Route path="/people/id/:id" element={<PersonDetails/>}/>

@@ -40,7 +40,7 @@ const login = (email, password, onSuccess, onError) => {
       .catch((error) => onError(error.message));
   };
 
-export default function LoginPage({onLogin}) {
+export default function LoginPage() {
   const navigate = useNavigate();
   const [email, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -61,7 +61,7 @@ export default function LoginPage({onLogin}) {
         () => {
         //the process of login succeed
             console.log('Login successful!');
-            onLogin();
+          
             navigate('/movie')},
         (errorMessage) => {
         // login failed
