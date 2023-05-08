@@ -1,0 +1,21 @@
+.LandingPageContainer{
+    background-image: url('./../../assets/LandingPage-background.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+}
+
+.title-landing{
+    font-size: 30pt;
+    margin-bottom: 0px;
+}
+
+.landingpage-button{
+    font-size: 40pt;
+    
+    top:100px;
+    left:100px;
+}

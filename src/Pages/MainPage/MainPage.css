@@ -1,0 +1,5 @@
+.mainpageContainer{
+    height: 100vh;
+    background-image: url('./../../assets/LandingPage-background.jpg');
+    background-size: cover;
+}

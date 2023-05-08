@@ -1,0 +1,125 @@
+.loginContainer{
+    
+   
+    background-image: url('./../../assets/LandingPage-background.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+/*
+  .link-mainpage{
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .link-mainpage:hover{
+    color: rgb(19, 18, 18);
+  }
+  .link-mainpage:active{
+    transform: scale(0.9);
+  }
+  
+  */
+  .link-login{
+    
+    text-decoration: none;
+    color: #4B4B4B;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+    margin-top: 100px;
+  }
+  .link-login:hover{
+    color: rgb(19, 18, 18);
+  }
+  .link-login:active{
+    transform: scale(0.9);
+  }
+  
+  .login-button{
+   
+    background-color: #696a65;
+    border-radius: 10px;
+    width: 321.14px;
+    height: 26px;    
+    margin-top: 30px;
+  }
+  .login-button:hover{
+    color: rgb(204, 207, 207);
+  }
+  
+  .login-label1{
+   
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 7px;
+  text-align: center;
+  color: #4B4B4B;
+  display: flex;
+ 
+  }
+  .login-label2{
+   
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 7px;
+  text-align: center;
+  color: #4B4B4B;
+  display: flex;
+  
+  }
+  
+  .login-input1{
+  
+  
+  background: #FFFFFF;
+  border-radius: 10px;
+  display:flex;
+  margin-top: 10px;
+  width:321.14px;
+  height:20px;
+  }
+
+  .login-input2{
+  background: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 10px;
+  width:321.14px;
+  height:20px;
+  }
+  
+  .title{
+    
+  font-family: 'arial';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  
+  color: #4B4B4B;
+  }
+  
+  .describe{
+  font-family: 'arial';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 18px;
+  margin-bottom: 90px;
+  color: #4B4B4B;
+  }
+  
