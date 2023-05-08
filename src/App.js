@@ -14,16 +14,13 @@ import PersonDetails from './Pages/PersonalPage/PersonalPage';
 
 function App() {
   
-  const [isloggedIn, setIsLoggedIn] = useState(false);
   
-  const handleLogin = () => {setIsLoggedIn(true);};
-  const handleLogout = () => {setIsLoggedIn(false);};
   return (
     
     <div>
       
       <BrowserRouter>
-      <MyNavbar2/>
+    
       <Routes>
         <Route exact path="/" element={<LandingPage/>}/>
         <Route path="/login" element={<LoginPage/>}/>
