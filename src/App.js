@@ -14,16 +14,25 @@ import PersonDetails from './Pages/PersonalPage/PersonalPage';
 
 function App() {
   
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
   
   return (
     
     <div>
       
       <BrowserRouter>
-    
+      
       <Routes>
         <Route exact path="/" element={<LandingPage/>}/>
-        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/login" element={<LoginPage />}/>
         <Route path='/movie' element={<MainPage/>}/>
         <Route path="/movies/details/:imdbID" element={<MovieDetails/>}/>
         <Route path="/people/id/:id" element={<PersonDetails/>}/>

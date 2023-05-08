@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LogoutBt from './../Logout'
 
-export default function MyNavbar2()
+export default function MyNavbar2({ isLoggedIn, onLogout })
 {
   
   
