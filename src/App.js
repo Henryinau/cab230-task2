@@ -14,7 +14,9 @@ import PersonDetails from './Pages/PersonalPage/PersonalPage';
 
 function App() {
   
+  
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 
   const handleLogin = () => {
     setIsLoggedIn(true);
@@ -29,7 +31,7 @@ function App() {
     <div>
       
       <BrowserRouter>
-      <MyNavbar/>
+      {isLoggedIn ? <MyNavbar2 /> : <MyNavbar />}
       <Routes>
         <Route exact path="/" element={<LandingPage/>}/>
         <Route path="/login" element={<LoginPage />}/>

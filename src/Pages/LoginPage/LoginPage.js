@@ -2,7 +2,7 @@ import './LoginPage.css'
 
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import { setIsLoggedIn } from "./../../App";
 
 const login = (email, password, onSuccess, onError) => {
     const API_URL = 'http://sefdb02.qut.edu.au:3000';
@@ -17,6 +17,7 @@ const login = (email, password, onSuccess, onError) => {
     })
     .then((res) => {
       if (res.status === 200) {
+
         return res.json();
       } else if (res.status === 400) {
         throw new Error('Invalid login request');
@@ -61,7 +62,7 @@ export default function LoginPage() {
         () => {
         //the process of login succeed
             console.log('Login successful!');
-          
+            setIsLoggedIn(true); // 更新登录状态为已登录
             navigate('/movie')},
         (errorMessage) => {
         // login failed
