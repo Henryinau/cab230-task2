@@ -98,8 +98,8 @@
 //export default PersonDetails;
 
 
-
-/*import React, { useState, useEffect } from "react";
+/*
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function PersonDetails() {
@@ -185,8 +185,8 @@ export default function PersonDetails() {
    );
   }
 
-
 */
+
 
 
 import React, { useState, useEffect } from "react";
@@ -282,10 +282,8 @@ export default function PersonDetails() {
               ))}
             </tbody>
           </table>
-          
-     </div>
-            )}
-            <div className="button-personal">
+
+          <div className="button-personal">
             <button onClick={handlePrevClick} disabled={currentPage === 0}>
               Previous
             </button>
@@ -296,8 +294,9 @@ export default function PersonDetails() {
                  Next
            </button>
           </div>
-            <div className='chart'>
-      <BarChart width={800} height={400} data={scores}>
+          
+          <div className='chart'>
+          <BarChart width={800} height={400} data={scores}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="scoreRange" />
             <YAxis  domain={[0,25]} tickCount={6}/>
@@ -307,6 +306,12 @@ export default function PersonDetails() {
             <Bar dataKey="count" fill="#8884d8" />
           </BarChart>
           </div>
+       </div>
+      
+            )}
+            
+       
+          
     </div>
   );
 }

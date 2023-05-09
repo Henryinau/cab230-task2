@@ -16,7 +16,7 @@ export default function LandingPage()
             
             <h1 className='title-landing'>Welcom to my app</h1>
             
-           <Button className="landingpage-button" onClick={handleClick}  type="submit">start now</Button>{''}
+           <Button className="landingpage-button custom-text" onClick={handleClick}  type="submit" variant="secondary" size="lg">start now</Button>{''}
           
             
         </div>
