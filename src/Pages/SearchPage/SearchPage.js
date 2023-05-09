@@ -189,6 +189,7 @@ export default function MovieSearch() {
         <tr>
             <th>Title</th>
             <th>Year</th>
+            
             <th>IMDB Rating</th>
             <th>Rotten Tomatoes Rating</th>
             <th>Metacritic Rating</th>
@@ -201,6 +202,7 @@ export default function MovieSearch() {
        <tr key={movie.imdbID}>
        <td><Link to={`/movies/details/${movie.imdbID}`}>{movie.title}</Link></td>
        <td>{movie.year}</td>
+      
        <td>{movie.imdbRating}</td>
        <td>{movie.rottenTomatoesRating}</td>
        <td>{movie.metacriticRating}</td>

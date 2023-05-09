@@ -4,9 +4,10 @@ import "./Navbar.css"
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import LogoutBt from './../Logout'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function MyNavbar({ isLoggedIn, onLogout })
+export default function MyNavbar()
 {
     return(
        
@@ -20,6 +21,7 @@ export default function MyNavbar({ isLoggedIn, onLogout })
           <Nav.Link href="/movie">Movie</Nav.Link>
           <Nav.Link href="/signup">Register</Nav.Link>
           <Nav.Link href="/login">Login</Nav.Link>
+          
           </Nav>
         </Container>
       </Navbar>
