@@ -48,7 +48,7 @@ export default function RegisterForm()
           throw new Error("Unknown error");
         }
       })
-      .then((data) => {console.log(data); navigate('/movie');})
+      .then((data) => {console.log(data); navigate('/login');})
       .catch((err) => {
         setError('Failed to register user');
         console.error('Error: ', err);

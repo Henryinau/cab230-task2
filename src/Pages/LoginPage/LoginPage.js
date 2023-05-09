@@ -42,7 +42,7 @@ const login = (email, password, onSuccess, onError) => {
       .catch((error) => onError(error.message));
   };
 
-export default function LoginPage() {
+export default function LoginPage(props) {
   const navigate = useNavigate();
   const [email, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -63,7 +63,7 @@ export default function LoginPage() {
         () => {
         //the process of login succeed
             console.log('Login successful!');
-            
+            props.setIsLoggedIn(true);
             navigate('/movie')},
         (errorMessage) => {
         // login failed
@@ -78,7 +78,7 @@ export default function LoginPage() {
     <div className="loginContainer">
      
       <h1 className="title">Welcome to Movie World</h1>
-      <p className="describe">This app is design for the people who want to browser movies</p>
+      <p className="describe">This app is design for the people who want to browse movies</p>
       <form className="loginform" onSubmit={handleSubmit}>
         
         <label className="login-label1"> Email:</label>

@@ -11,28 +11,29 @@ import MyNavbar from './Coponents/Navbar/Navbar'
 import MyNavbar2 from './Coponents/Navbar/Navbar2'
 import MovieDetails from './Pages/MovieDetailPage/MovieDetailPage'
 import PersonDetails from './Pages/PersonalPage/PersonalPage';
+import LogoutBt from './Coponents/Logout';
 
 
 
 function App() {
   
-  
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
-  
   return (
     
     <div>
       
       <BrowserRouter>
-     <MyNavbar2 />
+      {isLoggedIn ? <MyNavbar2/> : <MyNavbar />}
       <Routes>
         <Route exact path="/" element={<LandingPage/>}/>
-        <Route path="/login" element={<LoginPage />}/>
+        <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn}/>}/>
         <Route path='/movie' element={<MainPage/>}/>
         <Route path="/movies/details/:imdbID" element={<MovieDetails/>}/>
         <Route path="/people/id/:id" element={<PersonDetails/>}/>
         <Route path="/signup" element={<RegisterForm/>}/>
+        <Route path="/logout" element={<LogoutBt setIsLoggedIn={setIsLoggedIn}/>}/>
       </Routes>
       </BrowserRouter>
       
