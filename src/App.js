@@ -18,13 +18,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
+  
   
   return (
     
@@ -34,7 +28,7 @@ function App() {
       {isLoggedIn ? <MyNavbar2 /> : <MyNavbar />}
       <Routes>
         <Route exact path="/" element={<LandingPage/>}/>
-        <Route path="/login" element={<LoginPage />}/>
+        <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn}/>}/>
         <Route path='/movie' element={<MainPage/>}/>
         <Route path="/movies/details/:imdbID" element={<MovieDetails/>}/>
         <Route path="/people/id/:id" element={<PersonDetails/>}/>
