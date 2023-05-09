@@ -18,7 +18,7 @@ export default function MyNavbar2({ isLoggedIn, onLogout })
         <Container>
         <Navbar.Brand href="#home">Henry's web</Navbar.Brand>
           <Nav className="me-auto">
-          {isLoggedIn && ( <LogoutBt/>)}
+          <LogoutBt/>
           </Nav>
         </Container>
       </Navbar>
