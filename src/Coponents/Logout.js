@@ -4,22 +4,22 @@ const logout = (onSuccess, onError) => {
   const API_URL = 'http://sefdb02.qut.edu.au:3000';
   const url = `${API_URL}/user/logout`;
 
-  //const refreshToken = localStorage.getItem('refreshToken');
-  //if (!refreshToken) {
-  //  onError('No refresh token found');
-  //  return;
-  //}
+  const refreshToken = localStorage.getItem('refreshToken');
+  if (!refreshToken) {
+    onError('No refresh token found');
+    return;
+  }
 
   fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer`
+      Authorization: `Bearer ${refreshToken}`
     },
   })
   .then((res) => {
     if (res.status === 200) {
-      //localStorage.removeItem('refreshToken');
+      localStorage.removeItem('refreshToken');
       localStorage.removeItem('token');
       onSuccess();
     } else if (res.status === 400) {
