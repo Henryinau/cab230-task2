@@ -200,7 +200,7 @@ export default function MovieSearch() {
        <tbody>
        {filteredMovies.map((movie) => (
        <tr key={movie.imdbID}>
-       <td><Link to={`/movies/details/${movie.imdbID}`}>{movie.title}</Link></td>
+       <td><Link to={`/movie/details/${movie.imdbID}`}>{movie.title}</Link></td>
        <td>{movie.year}</td>
       
        <td>{movie.imdbRating}</td>

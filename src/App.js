@@ -30,7 +30,7 @@ function App() {
         <Route exact path="/" element={<LandingPage/>}/>
         <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn}/>}/>
         <Route path='/movie' element={<MainPage/>}/>
-        <Route path="/movies/details/:imdbID" element={<MovieDetails/>}/>
+        <Route path="/movie/details/:imdbID" element={<MovieDetails/>}/>
         <Route path="/people/id/:id" element={<PersonDetails/>}/>
         <Route path="/signup" element={<RegisterForm/>}/>
         <Route path="/logout" element={<LogoutBt setIsLoggedIn={setIsLoggedIn}/>}/>
